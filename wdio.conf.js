@@ -37,17 +37,18 @@ exports.config = {
 
         //'./test/resources/features/**/*.feature',  
         //'./test/resources/features/Admin/*.feature',   
-        './test/resources/features/CatalogPage.feature', 
-        './test/resources/features/AddToCart.feature',
-        './test/resources/features/EmailAlreadyUsedOnCheckout.feature',
-        './test/resources/features/CompanyContact.feature',
+        //'./test/resources/features/*.feature'
+        //'./test/resources/features/CatalogPage.feature', 
+        './test/resources/features/LoginToShop.feature',
+        //'./test/resources/features/EmailAlreadyUsedOnCheckout.feature',
+        //'./test/resources/features/CompanyContact.feature',
         //'./test/resources/features/Login.feature',
     ],
     // Patterns to exclude.
     exclude: [
         // 'path/to/excluded/files'
         /*Important!!! always exclude this part*/
-                
+        './test/resources/features/Links.feature',    
          
         /*End of excluded test cases*/
         /*Tests under development*/
@@ -88,7 +89,7 @@ exports.config = {
         // maxInstances can get overwritten per capability. So if you have an in-house Selenium
         // grid with only 5 firefox instances available you can make sure that not more than
         // 5 instances get started at a time.
-        maxInstances: 5,
+        maxInstances: 4,
         //
         //browserName: 'chrome',
         browserName: 'chrome',

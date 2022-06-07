@@ -13,9 +13,22 @@ When(/^User clicks Catalog link$/,()=>{
     homeobject.navigateToCatalogPage();
 });
 
+
+When(/^User clicks "Logige sisse"$/,()=>{
+    catalogobject.clickTopLoginButton();
+});
+
+
 When(/^User clicks on Item link$/,()=>{
     catalogobject.clickFirstItem();
 });
+
+When(/^User enters valid credentials into login form$/,()=>{
+    catalogobject.fillUserNameField();
+    catalogobject.fillPasswordField();
+});
+
+
 
 When(/^User clicks on Add to cart item button$/,()=>{
     catalogobject.clickAddToCartButton();

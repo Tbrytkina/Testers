@@ -11,13 +11,20 @@ class CatalogPage extends Page {
     get addToCartButton() { return $('#content > div.product-list > div > div.right > div > input')};
     get cartWithItem() { return $('#cart-total')};
     get checkoutLink() { return $('#cart > div.content > div.checkout > a:nth-child(2)')};
-    
+    get topLoginButton() { return $('#welcome > table > tbody > tr > td:nth-child(1) > a > input')};
+    get userNameField() { return $('#content > div.login-content > div.right > form > div > input[type=text]:nth-child(4)')};
+    get passwordField() { return $('#content > div.login-content > div.right > form > div > input[type=password]:nth-child(9)')};
     /**
      * Method to click first item
      */
     clickFirstItem() {
         utilObj.waitForDefaultTimeOut()
         this.firstItem.click();
+    }
+
+    clickTopLoginButton() {
+        utilObj.waitForDefaultTimeOut()
+        this.topLoginButton.click();
     }
 
     clickOpenCartTotal() {
@@ -28,6 +35,21 @@ class CatalogPage extends Page {
         this.checkoutLink.click();
         browser.pause(5000);
     }
+
+    fillUserNameField() {
+        utilObj.waitForDefaultTimeOut();
+        this.userNameField.click()
+        this.userNameField.clearValue();
+        this.userNameField.setValue('123456@test.com');
+    };
+    
+    fillPasswordField()
+    {
+        utilObj.waitForDefaultTimeOut();
+        this.passwordField.click()
+        this.passwordField.clearValue();
+        this.passwordField.setValue('Test1234');
+    };
 
   /*  verifyCheckoutLinkVisible() {
      // utilObj.waitForDefaultTimeout();
