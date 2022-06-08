@@ -10,4 +10,5 @@ Feature: User login to Catalog page
         Then User is logged in
 
         #Some test data
+        #Some test data
         #123456@test.com / Test1234
