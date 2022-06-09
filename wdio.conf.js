@@ -24,6 +24,8 @@ exports.config = {
     // WebdriverIO allows it to run your tests in arbitrary locations (e.g. locally or
     // on a remote machine).
     runner: 'local',
+    //Here some new comment
+    //Here some new comment    
     //
     // ==================
     // Specify Test Files
