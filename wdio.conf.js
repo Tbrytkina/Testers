@@ -42,7 +42,7 @@ exports.config = {
         './test/resources/features/LoginToShop.feature',
         './test/resources/features/EmailAlreadyUsedOnCheckout.feature',
         './test/resources/features/CompanyContact.feature',
-        './test/resources/features/Login.feature',
+        //'./test/resources/features/Login.feature',
     ],
     // Patterns to exclude.
     exclude: [

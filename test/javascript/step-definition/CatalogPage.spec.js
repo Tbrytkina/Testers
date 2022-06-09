@@ -18,6 +18,10 @@ When(/^User clicks "Logige sisse"$/,()=>{
     catalogobject.clickTopLoginButton();
 });
 
+When(/^User clicks form login button$/,()=>{
+    catalogobject.clickLoginButton();
+});
+
 
 When(/^User clicks on Item link$/,()=>{
     catalogobject.clickFirstItem();
@@ -40,6 +44,12 @@ Then(/^User moves to Catalog page$/,()=>{
 Then(/^item should be added to the cart$/, ()=>{
     catalogobject.clickOpenCartTotal();  
 })
+
+Then(/^User is logged in$/, ()=>{
+    catalogobject.verifyUserLoggedIn();  
+})
+
+
 
 When(/^user credentials should be entered$/,()=>{
     checkoutobject.loginAsRegisteredUser();

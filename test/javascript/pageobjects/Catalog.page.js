@@ -12,8 +12,11 @@ class CatalogPage extends Page {
     get cartWithItem() { return $('#cart-total')};
     get checkoutLink() { return $('#cart > div.content > div.checkout > a:nth-child(2)')};
     get topLoginButton() { return $('#welcome > table > tbody > tr > td:nth-child(1) > a > input')};
+    get loginButton() { return $('#content > div.login-content > div.right > form > div > input.button')};
     get userNameField() { return $('#content > div.login-content > div.right > form > div > input[type=text]:nth-child(4)')};
     get passwordField() { return $('#content > div.login-content > div.right > form > div > input[type=password]:nth-child(9)')};
+    get logoutLink() { return $('#welcome > a:nth-child(3)')};
+    
     /**
      * Method to click first item
      */
@@ -25,6 +28,11 @@ class CatalogPage extends Page {
     clickTopLoginButton() {
         utilObj.waitForDefaultTimeOut()
         this.topLoginButton.click();
+    }
+
+    clickLoginButton() {
+        utilObj.waitForDefaultTimeOut()
+        this.loginButton.click();
     }
 
     clickOpenCartTotal() {
@@ -40,7 +48,7 @@ class CatalogPage extends Page {
         utilObj.waitForDefaultTimeOut();
         this.userNameField.click()
         this.userNameField.clearValue();
-        this.userNameField.setValue('123456@test.com');
+        this.userNameField.setValue('test1871@sharklasers.com');
     };
     
     fillPasswordField()
@@ -50,6 +58,19 @@ class CatalogPage extends Page {
         this.passwordField.clearValue();
         this.passwordField.setValue('Test1234');
     };
+
+    verifyUserLoggedIn()
+    {
+        utilObj.waitForDefaultTimeOut();
+        if (this.logoutLink.isDisplayed()==true && this.logoutLink.isClickable()==true)
+        {
+            this.logoutLink.click();
+        }
+        else 
+        {
+            throw "Link logout doesn not exist"
+        }         
+    }
 
   /*  verifyCheckoutLinkVisible() {
      // utilObj.waitForDefaultTimeout();
