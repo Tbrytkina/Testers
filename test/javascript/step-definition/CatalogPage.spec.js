@@ -9,6 +9,7 @@ Given(/^User is on Home page$/,()=>{
     homeobject.verifyCurrentPage();
 });
 
+
 When(/^User clicks Catalog link$/,()=>{
     homeobject.navigateToCatalogPage();
 });

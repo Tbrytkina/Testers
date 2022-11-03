@@ -40,10 +40,11 @@ exports.config = {
         //'./test/resources/features/**/*.feature',  
         //'./test/resources/features/Admin/*.feature',   
         //'./test/resources/features/*.feature'
-        './test/resources/features/CatalogPage.feature', 
-        './test/resources/features/LoginToShop.feature',
-        './test/resources/features/EmailAlreadyUsedOnCheckout.feature',
-        './test/resources/features/CompanyContact.feature',
+        //'./test/resources/features/CatalogPage.feature', 
+        //'./test/resources/features/LoginToShop.feature',
+        './test/resources/features/AddItemToCart.feature',
+        //'./test/resources/features/EmailAlreadyUsedOnCheckout.feature',
+        //'./test/resources/features/CompanyContact.feature',
         //'./test/resources/features/Login.feature',
     ],
     // Patterns to exclude.
