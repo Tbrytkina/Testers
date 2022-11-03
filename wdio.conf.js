@@ -98,7 +98,7 @@ exports.config = {
         'goog:chromeOptions': {
 
             //args: ['--headless', '--no-sandbox', '--disable-gpu', '--disable-dev-shm-usage', '--window-size=1200,1100', '--disable-translate', '--disable-extensions', '--disable-background-networking', '--disable-sync', '--disable-default-apps', '--mute-audio', '--no-first-run', '--disable-prompt-on-repost'],
-            args: ['--window-size=1024,768', '--disable-translate', '--disable-extensions', '--disable-background-networking', '--disable-sync', '--disable-default-apps', '--mute-audio', '--no-first-run', '--disable-prompt-on-repost'],
+            args: ['--window-size=1400,900', '--disable-translate', '--disable-extensions', '--disable-background-networking', '--disable-sync', '--disable-default-apps', '--mute-audio', '--no-first-run', '--disable-prompt-on-repost'],
             prefs: {'download.default_directory': downloadDir,'safebrowsing.enabled': 'False'},
               
         },    
