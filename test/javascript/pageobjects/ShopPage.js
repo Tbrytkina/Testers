@@ -7,6 +7,8 @@ class ShopPage extends Page {
 
     //get CatalogLink() { return $('#hp > div.main > div.header.box > div.slogan > ul > li:nth-child(3) > a""]'); }
     get cart() { return $('#cart')};
+    get firstPictureInCart() { return $('#cart > div.content > div.mini-cart-info > table > tbody > tr > td.image > a > img')};
+    //get firstPictureInCart() { return $('#cart > div.content > div.mini-cart-info > table > tbody > tr:nth-child(2) > td.image > a > img')};
     get firstItem() { return $('#content > table > tbody > tr:nth-child(4) > td:nth-child(1) > a > b')};
     get secondItem() { return $('#content > table > tbody > tr:nth-child(4) > td:nth-child(2) > a > b')};
     get addToCartButton() { return $('#content > div.product-list > div > div.right > div > input')};
@@ -22,8 +24,7 @@ class ShopPage extends Page {
     
     
     open() {
-        browser.navigateTo("https://infodekoor-uat.gammatest.net/index.php")
-        
+        browser.navigateTo("https://infodekoor-uat.gammatest.net/index.php")        
     }
     
     verifyCurrentPage() {
@@ -43,10 +44,23 @@ class ShopPage extends Page {
 
     clickLisageOstukorvi() {
         utilObj.waitForDefaultTimeOut()
-        this.buttonLisageOstukorvi.click();
-        browser.pause(5000);        
+        this.addToCartButton.click();                
     }
     
+    verifyItemAddedToCart() {
+        utilObj.waitForDefaultTimeOut()
+        //browser.pause(5000);
+        this.cartWithItem.click();
+        browser.pause(5000);
+        if (this.firstPictureInCart.isDisplayed())
+        {
+            allure.createStep('Item is added');
+        }
+        else
+        {
+            throw "Item is not added"
+        }        
+    }
    
 
 }

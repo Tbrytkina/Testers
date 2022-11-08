@@ -5,8 +5,10 @@ const utilObj = require( '../helper/WaitActions')
 
 class HomePage extends Page {
 
-    get catalogLink() { return $('#hp > div.main > div.header.box > div.slogan > ul > li:nth-child(3) > a'); }
+    
     get firmastLink() { return $('#hp > div.main > div.header.box > div.slogan > ul > li:nth-child(1) > a'); }
+    get latestNewsLink() { return $("#hp > div.main > div.header.box > div.slogan > ul > li:nth-child(2) > a"); }
+    get catalogLink() { return $('#hp > div.main > div.header.box > div.slogan > ul > li:nth-child(3) > a'); }
   
     /**
      * Method to verofy if current page is dashboard else navigate to dashboard
@@ -59,6 +61,29 @@ class HomePage extends Page {
     navigateToAboutPage() {
         utilObj.waitForDefaultTimeOut();
         this.firmastLink.click();
+    }
+
+    clickTopMenuLink(topmenulink) {
+        if (topmenulink=='Firmast') {
+            this.firmastLink.click();
+        }
+        else if (topmenulink=='Viimased uudised') {
+            this.latestNewsLink.click()
+        }
+        else {
+            throw "Some error"
+        }
+    }
+
+    verifyPageUrl(url){
+        let currentPageUrl = browser.getUrl();
+        console.log(currentPageUrl)
+        if (currentPageUrl==url) {
+
+        }
+        else {
+            throw "Url error"
+        }
     }
 
 }

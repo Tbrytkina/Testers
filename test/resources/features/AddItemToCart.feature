@@ -5,4 +5,5 @@ Feature: User adds item into cart
         Given User is on Catalog page
         When User clicks on first visible product item
         And User clicks button Lisage Ostukorvi
-        #Then 
+        #Then item should be added to the cart
+        Then item should be in the cart

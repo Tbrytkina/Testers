@@ -43,6 +43,7 @@ exports.config = {
         //'./test/resources/features/CatalogPage.feature', 
         //'./test/resources/features/LoginToShop.feature',
         './test/resources/features/AddItemToCart.feature',
+        './test/resources/features/StaticPageAvailable.feature',
         //'./test/resources/features/EmailAlreadyUsedOnCheckout.feature',
         //'./test/resources/features/CompanyContact.feature',
         //'./test/resources/features/Login.feature',

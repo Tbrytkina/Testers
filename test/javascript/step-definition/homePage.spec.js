@@ -14,6 +14,16 @@ When(/^Select the home button$/,()=>{
     homeobject.navigateToHomepage();
 });
 
+When(/^User clicks topmenu link (.*)$/,(topmenulink)=>{
+    homeobject.clickTopMenuLink(topmenulink);
+});
+
+Then(/^page is opened and url is equal to (.*)$/,(url)=>{
+    homeobject.verifyPageUrl(url);
+})
+
+//Then page is opened and url is equal to <url>
+
 Then(/^User moves to home page$/,()=>{
     homeobject.verifyHomePage();
 })
