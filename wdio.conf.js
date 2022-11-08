@@ -42,8 +42,9 @@ exports.config = {
         //'./test/resources/features/*.feature'
         //'./test/resources/features/CatalogPage.feature', 
         //'./test/resources/features/LoginToShop.feature',
-        './test/resources/features/AddItemToCart.feature',
-        './test/resources/features/StaticPageAvailable.feature',
+        //'./test/resources/features/AddItemToCart.feature',
+        //'./test/resources/features/StaticPageAvailable.feature',
+        './test/resources/features/*.feature',
         //'./test/resources/features/EmailAlreadyUsedOnCheckout.feature',
         //'./test/resources/features/CompanyContact.feature',
         //'./test/resources/features/Login.feature',
@@ -52,8 +53,8 @@ exports.config = {
     exclude: [
         // 'path/to/excluded/files'
         /*Important!!! always exclude this part*/
-        './test/resources/features/Links.feature',    
-         
+        //'./test/resources/features/Links.feature',    
+        './test/resources/features/StaticPageAvailable.feature',
         /*End of excluded test cases*/
         /*Tests under development*/
         
@@ -119,7 +120,7 @@ exports.config = {
     // Define all options that are relevant for the WebdriverIO instance here
     //
     // Level of logging verbosity: trace | debug | info | warn | error | silent
-    logLevel: 'info',
+    logLevel: 'silent',
     //
     // Set specific log levels per logger
     // loggers:
@@ -220,7 +221,7 @@ exports.config = {
         // <number> timeout for step definitions
         timeout: 60000,
         // <boolean> Enable this config to treat undefined definitions as warnings.
-        ignoreUndefinedDefinitions: false
+        ignoreUndefinedDefinitions: true
     },
     
     //

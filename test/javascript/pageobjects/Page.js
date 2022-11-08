@@ -54,6 +54,4 @@ module.exports = class Page {
             this.homePageLink.click();
         }*/
     }
-
-
-}
+    }
