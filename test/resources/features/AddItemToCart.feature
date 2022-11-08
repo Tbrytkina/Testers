@@ -7,3 +7,6 @@ Feature: User adds item into cart
         And User clicks button Lisage Ostukorvi
         #Then item should be added to the cart
         Then item should be in the cart
+        #Then item in the cart
+
+        
